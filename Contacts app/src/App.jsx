@@ -22,6 +22,7 @@ function App() {
 
   return (
     <>
+      <img src="/icon-192.png" alt="Logo de la app" width="80" />
       <h1>Mis Contactos</h1>
       <ContactForm onAddContact={addContacto} />
       <ContactList contactos={contactos} onDelete={deleteContacto} />
