@@ -1,0 +1,21 @@
+{
+  "name": "Gestor de Contactos",
+  "short_name": "Contactos",
+  "description": "App para listar, agregar y eliminar contactos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2f2f2",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
