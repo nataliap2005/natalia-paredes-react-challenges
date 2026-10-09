@@ -1,0 +1,5 @@
+import { IonPage,IonHeader,IonToolbar,IonTitle,IonContent,IonButton,IonCard,IonCardHeader,IonCardTitle,IonCardContent } from '@ionic/react';
+import { useAuth } from '../contexts/AuthContext';
+import { useNetwork } from '../hooks/useNetwork';
+import { Status } from '../components/Status';
+export default function Home(){const {user,logout}=useAuth();const {isOnline}=useNetwork();return <IonPage><IonHeader><IonToolbar><IonTitle>DailyHub</IonTitle></IonToolbar></IonHeader><IonContent className="ion-padding"><h2>Hola, {user?.email}</h2><Status isOnline={isOnline}/><IonCard><IonCardHeader><IonCardTitle>Contactos</IonCardTitle></IonCardHeader><IonCardContent>Firestore · datos en la nube</IonCardContent></IonCard><IonCard><IonCardHeader><IonCardTitle>Tareas</IonCardTitle></IonCardHeader><IonCardContent>Realtime Database · sincronización en tiempo real</IonCardContent></IonCard><IonCard><IonCardHeader><IonCardTitle>Frutas</IonCardTitle></IonCardHeader><IonCardContent>Dexie · almacenamiento local sin conexión</IonCardContent></IonCard><IonButton color="medium" expand="block" onClick={()=>void logout()}>Cerrar sesión</IonButton></IonContent></IonPage>;}

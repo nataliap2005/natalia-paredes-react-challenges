@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "tasks": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        "$taskId": {
+          ".validate": "newData.hasChildren(['title','description','completed','userId']) && newData.child('userId').val() === auth.uid"
+        }
+      }
+    }
+  }
+}
