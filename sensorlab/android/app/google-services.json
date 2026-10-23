@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "445967100655",
+    "firebase_url": "https://app-dev-mobiles-default-rtdb.firebaseio.com",
+    "project_id": "app-dev-mobiles",
+    "storage_bucket": "app-dev-mobiles.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445967100655:android:fea11aa1b173fc4b79091a",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445967100655-m65p3lsk8diiej2sbtprm8sj0895hhfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgocxphgWJdm0Va0rkNBACFeBkYvSkVts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445967100655-m65p3lsk8diiej2sbtprm8sj0895hhfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

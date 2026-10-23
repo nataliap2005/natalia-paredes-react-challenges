@@ -1,0 +1,7 @@
+{
+  "name": "sensorlab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

@@ -1,0 +1,2 @@
+import type {ReactNode} from 'react';import {IonPage,IonHeader,IonToolbar,IonTitle,IonButtons,IonBackButton,IonContent} from '@ionic/react';
+export function SensorPage({title,children}:{title:string;children:ReactNode}){return <IonPage><IonHeader><IonToolbar><IonButtons slot="start"><IonBackButton defaultHref="/home"/></IonButtons><IonTitle>{title}</IonTitle></IonToolbar></IonHeader><IonContent className="ion-padding"><div className="sensor-content">{children}</div></IonContent></IonPage>;}

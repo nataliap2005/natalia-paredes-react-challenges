@@ -1,0 +1,3 @@
+import { useState } from 'react';import { Device, type DeviceInfo, type BatteryInfo } from '@capacitor/device';
+export function useDevice(){const [info,setInfo]=useState<DeviceInfo|null>(null);const [battery,setBattery]=useState<BatteryInfo|null>(null);const [id,setId]=useState('');const [error,setError]=useState('');const [loading,setLoading]=useState(false);
+ const load=async()=>{setLoading(true);try{setError('');const [i,b,identifier]=await Promise.all([Device.getInfo(),Device.getBatteryInfo(),Device.getId()]);setInfo(i);setBattery(b);setId(identifier.identifier);}catch(e){setError(String(e));}finally{setLoading(false);}};return {info,battery,id,error,loading,load};}
