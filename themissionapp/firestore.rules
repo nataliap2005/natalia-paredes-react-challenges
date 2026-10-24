@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function signedIn() {return request.auth != null;}
+  function isOwner(uid) {return signedIn() && request.auth.uid == uid;}
+  match /mission_users/{uid} {
+   allow read: if signedIn(); // needed for real-user ranking
+   allow create: if isOwner(uid) && request.resource.data.points == 0;
+   allow update: if isOwner(uid) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['points','updatedAt','displayName','email']);
+   allow delete: if false;
+  }
+  match /mission_progress/{uid} {
+   allow read: if isOwner(uid);
+   allow create,update: if isOwner(uid)
+     && request.resource.data.keys().hasOnly(['points','missions','updatedAt'])
+     && request.resource.data.missions.keys().hasAll(['photo','movement','stillness'])
+     && request.resource.data.points ==
+        ( (request.resource.data.missions.photo == true ? 40 : 0) +
+          (request.resource.data.missions.movement == true ? 40 : 0) +
+          (request.resource.data.missions.stillness == true ? 40 : 0) )
+     && (request.resource.data.missions.stillness != true || request.resource.data.missions.movement == true)
+     && (!exists(/databases/$(database)/documents/mission_progress/$(uid)) ||
+        (resource.data.missions.photo != true || request.resource.data.missions.photo == true) &&
+        (resource.data.missions.movement != true || request.resource.data.missions.movement == true) &&
+        (resource.data.missions.stillness != true || request.resource.data.missions.stillness == true));
+   allow delete: if false;
+  }
+ }
+}

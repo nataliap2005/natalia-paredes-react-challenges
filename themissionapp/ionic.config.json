@@ -1,0 +1,7 @@
+{
+  "name": "themissionapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
