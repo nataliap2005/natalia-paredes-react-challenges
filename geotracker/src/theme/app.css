@@ -1,0 +1,18 @@
+ion-content{--background:#f4f6fb;--color:#19273a}
+ion-toolbar{--background:#fff;--color:#172336;--border-color:#e4e8f0}
+.page-shell{max-width:820px;margin:0 auto;padding:4px 0 36px}
+.hero{border-radius:20px;background:linear-gradient(125deg,#524ddd,#139ba2);color:white;padding:28px 24px;margin-bottom:18px}
+.hero span{font-size:10px;font-weight:800;letter-spacing:.16em;opacity:.85}
+.hero h1{font-size:clamp(25px,5vw,36px);margin:12px 0;line-height:1.18;color:white}
+.hero p{color:#f0f4ff;margin-bottom:0}
+ion-card{--background:#fff;--color:#263247;box-shadow:0 5px 22px rgba(23,35,66,.07);border-radius:16px;margin:12px 0}
+ion-card-title{font-size:19px;color:#15253d}
+.control-row{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:14px}
+.control-row ion-button{flex:1 1 150px;margin:0}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
+.metrics>div{background:white;padding:15px 10px;border-radius:15px;text-align:center;display:flex;flex-direction:column;gap:5px;min-width:0}
+.metrics strong{font-size:21px;color:#534edb}.metrics span{font-size:11px;color:#68758c}
+.status-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.panel{background:white;border-radius:15px;margin-top:16px;padding:16px 18px}
+.panel h3{margin:0 0 8px}.panel p{color:#4f5c72;line-height:1.5}
+.hint{font-size:13px;color:#657187;line-height:1.5}

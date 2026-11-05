@@ -1,0 +1,47 @@
+
+@import 'leaflet/dist/leaflet.css';
+
+.map-container {
+  width: 100%;
+  height: min(52vh, 430px);
+  min-height: 290px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #d9dfed;
+  background: #e8eef2;
+}
+
+.map-canvas {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Evita que los estilos globales alteren los mosaicos del mapa. */
+.map-container .leaflet-tile {
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Permite que Leaflet controle el tamaño de las imágenes. */
+.map-container .leaflet-container img {
+  max-width: none !important;
+}
+
+.geo-pin {
+  border: 0;
+  background: transparent;
+}
+
+.geo-pin span {
+  display: block;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #5752df;
+  border: 4px solid white;
+  box-shadow:
+    0 0 0 3px #5752df,
+    0 2px 9px #0004;
+}
